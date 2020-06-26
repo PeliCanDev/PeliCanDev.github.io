@@ -6,10 +6,20 @@
     <description>Recent content on PeliCanDev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Jun 2020 17:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2020 14:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://pelicandev.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Test 2!</title>
+      <link>https://pelicandev.io/2020/06/22/test-2/</link>
+      <pubDate>Mon, 22 Jun 2020 14:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/2020/06/22/test-2/</guid>
+      <description>Test 2- Def
+test redirect to hello</description>
+    </item>
     
     <item>
       <title>Hosting Hugo Static Website on GitHub Pages</title>
