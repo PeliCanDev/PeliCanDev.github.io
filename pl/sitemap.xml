@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://pelicandev.io/pl/</loc>
+    <lastmod>2020-06-20T14:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://pelicandev.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://pelicandev.io/pl/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://pelicandev.io/pl/posts/</loc>
+    <lastmod>2020-06-20T14:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://pelicandev.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://pelicandev.io/pl/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://pelicandev.io/pl/2020/06/20/test/</loc>
+    <lastmod>2020-06-20T14:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://pelicandev.io/2020/06/20/test/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://pelicandev.io/pl/2020/06/20/test/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://pelicandev.io/pl/2020/06/20/witaj-%C5%9Bwiecie/</loc>
+    <lastmod>2020-06-20T14:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://pelicandev.io/2020/06/20/hello-world/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://pelicandev.io/pl/2020/06/20/witaj-%C5%9Bwiecie/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://pelicandev.io/pl/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://pelicandev.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://pelicandev.io/pl/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://pelicandev.io/pl/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://pelicandev.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://pelicandev.io/pl/tags/"
+                />
+  </url>
+  
+</urlset>

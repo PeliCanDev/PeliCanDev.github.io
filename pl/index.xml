@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PeliCanDev</title>
+    <link>https://pelicandev.io/pl/</link>
+    <description>Recent content on PeliCanDev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 20 Jun 2020 14:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://pelicandev.io/pl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test!</title>
+      <link>https://pelicandev.io/pl/2020/06/20/test/</link>
+      <pubDate>Sat, 20 Jun 2020 14:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/pl/2020/06/20/test/</guid>
+      <description>Test - PL
+test redirect to hello</description>
+    </item>
+    
+    <item>
+      <title>Witaj świecie! </title>
+      <link>https://pelicandev.io/pl/2020/06/20/witaj-%C5%9Bwiecie/</link>
+      <pubDate>Sat, 20 Jun 2020 14:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/pl/2020/06/20/witaj-%C5%9Bwiecie/</guid>
+      <description>First post - PL</description>
+    </item>
+    
+  </channel>
+</rss>
