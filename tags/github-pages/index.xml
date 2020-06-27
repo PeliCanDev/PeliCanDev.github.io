@@ -6,10 +6,21 @@
     <description>Recent content in github-pages on PeliCanDev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Jun 2020 17:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2020 18:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://pelicandev.io/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Custom Domain on GitHub Pages</title>
+      <link>https://pelicandev.io/2020/06/26/custom-domain-on-github-pages/</link>
+      <pubDate>Fri, 26 Jun 2020 18:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/2020/06/26/custom-domain-on-github-pages/</guid>
+      <description>Introduction Using Github pages we can use own domain - more about that you can find in documentation.
+Here is steps to configure custom domain   First we need repository. Repository for root domain should be named {user_name}.github.io or {organization_name}.github.io. In my case this is pelicandev.github.io repository.
+  Now go to repository settings and set your domain in GitHub Pages section.   Go to your DNS provider and create records for you site.</description>
+    </item>
     
     <item>
       <title>Hosting Hugo Static Website on GitHub Pages</title>
