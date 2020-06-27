@@ -110,7 +110,7 @@ In my case this is <a href="https://github.com/pelicandev/pelicandev.github.io" 
 </li>
 <li>
 <p>Now go to repository settings and set your domain in <code>GitHub Pages</code> section.
-<img src="/images/2020/06/26/set-custom-domain-on-github-pages.jpg" alt=""></p>
+<img src="/images/2020/06/26/set-custom-domain-on-github-pages.jpg" alt="setting custon domain address on GitHub Pages"></p>
 </li>
 <li>
 <p>Go to your DNS provider and create records for you site. Here is my records:</p>
@@ -126,11 +126,29 @@ Value in CNAME records is my Github Pages address.</p>
 </li>
 </ol>
 <p>Now everything is set up correctly. It may take a while for the page to be accessible by our custom domain - this time depends on DNS propagation.</p>
-<!-- raw HTML omitted -->
 
     </div>
     <div class="post-footer">
-      
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "pelicandev" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     </div>
   </article>
 
