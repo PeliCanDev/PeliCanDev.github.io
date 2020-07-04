@@ -40,7 +40,7 @@ Here is steps to configure custom domain   First we need repository. Repository 
       <pubDate>Sat, 20 Jun 2020 14:00:00 +0200</pubDate>
       
       <guid>https://pelicandev.io/2020/06/20/hello-world/</guid>
-      <description>First post - DEF</description>
+      <description>First post</description>
     </item>
     
   </channel>
