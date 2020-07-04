@@ -17,9 +17,10 @@
       <pubDate>Sat, 04 Jul 2020 18:00:00 +0200</pubDate>
       
       <guid>https://pelicandev.io/2020/07/04/custom-subdomain-on-github-pages/</guid>
-      <description>Steps to configure custom subdomain   First we need repository. I created subdomain repository for this purpose.
+      <description>Introduction Continuation of previous post about seting Custom Domain on GitHub Pages. Today I seting custom subdomain on GitHub Pages.
+Steps to configure custom subdomain   First we need repository. I&amp;rsquo;ve created subdomain repository for this purpose.
   Now go to repository settings and set subdomain in GitHub Pages -&amp;gt; Custom domain section.   Go to your DNS provider and update records. Here is my records:
-| Name | Type | Value | |-----------|-------|-----------------------| | subdomain | A | 185.199.108.153 | | subdomain | A | 185.199.109.153 | | subdomain | A | 185.</description>
+| Name | Type | Value | |-----------|-------|-----------------------| | subdomain | A | 185.</description>
     </item>
     
     <item>
