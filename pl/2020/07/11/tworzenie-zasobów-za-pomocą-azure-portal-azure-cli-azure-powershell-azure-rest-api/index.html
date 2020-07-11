@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Tworzenie zasobów za pomocą Azure Portal, Azure CLI, Azure PowerShell, Azure Rest API // PeliCanDev</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.72.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Bartosz Pelikan" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://pelicandev.io/css/main.min.d9b79013168235997bf7880bb0f8bd04abbe08bf12a1255839c3e3ace6484947.css" />
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-158097567-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tworzenie zasobów za pomocą Azure Portal, Azure CLI, Azure PowerShell, Azure Rest API"/>
+<meta name="twitter:description" content="Zadanie domowe z tygodnia 2 (Microsoft Azure – Software Development)
+ 1. Utworzenie Resource group Utworzenie Resource group za pomocą:
+ Azure Portal Azure CLI PowerShell Azure Rest API  1.1 Azure Portal 1.2 Azure CLI RG_NAME=&#34;rg-azdev-zad2-cli&#34; RG_LOCATION=&#34;westeurope&#34; az group create -n $RG_NAME -l $RG_LOCATION bartosz@Azure:~$ az account list-locations -o table DisplayName Latitude Longitude Name -------------------- ---------- ----------- ------------------ East Asia 22.267 114.188 eastasia Southeast Asia 1.283 103.833 southeastasia Central US 41."/>
+
+    <meta property="og:title" content="Tworzenie zasobów za pomocą Azure Portal, Azure CLI, Azure PowerShell, Azure Rest API" />
+<meta property="og:description" content="Zadanie domowe z tygodnia 2 (Microsoft Azure – Software Development)
+ 1. Utworzenie Resource group Utworzenie Resource group za pomocą:
+ Azure Portal Azure CLI PowerShell Azure Rest API  1.1 Azure Portal 1.2 Azure CLI RG_NAME=&#34;rg-azdev-zad2-cli&#34; RG_LOCATION=&#34;westeurope&#34; az group create -n $RG_NAME -l $RG_LOCATION bartosz@Azure:~$ az account list-locations -o table DisplayName Latitude Longitude Name -------------------- ---------- ----------- ------------------ East Asia 22.267 114.188 eastasia Southeast Asia 1.283 103.833 southeastasia Central US 41." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pelicandev.io/pl/2020/07/11/tworzenie-zasob%C3%B3w-za-pomoc%C4%85-azure-portal-azure-cli-azure-powershell-azure-rest-api/" />
+<meta property="article:published_time" content="2020-07-11T21:00:00+02:00" />
+<meta property="article:modified_time" content="2020-07-11T21:00:00+02:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="/pl"><img class="app-header-avatar" src="/images/img.jpg" alt="Bartosz Pelikan" /></a>
+      <h1>PeliCanDev</h1>
+      <p>Cloud Technology Enthusiast | .NET developer</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/bpelikan" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://twitter.com/bartoszpelikan" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://www.linkedin.com/in/bartoszpelikan/" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg></a>
+        
+          <a target="_blank" href="https://www.bartoszpelikan.pl/" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link">
+  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+</svg></a>
+        
+      </div>
+      
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Tworzenie zasobów za pomocą Azure Portal, Azure CLI, Azure PowerShell, Azure Rest API</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 11, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div>
+        
+
+<div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+          <a class="tag" href="https://pelicandev.io/pl/tags/azure/">azure</a><a class="tag" href="https://pelicandev.io/pl/tags/azure-development/">azure-development</a><a class="tag" href="https://pelicandev.io/pl/tags/development/">development</a><a class="tag" href="https://pelicandev.io/pl/tags/szko%C5%82a-chmury/">szkoła-chmury</a><a class="tag" href="https://pelicandev.io/pl/tags/homework/">homework</a></div></div>
+    </header>
+    <div class="post-content">
+      <p><a href="https://szkolachmury.pl/google-cloud-platform-droga-architekta/tydzien-2-podstawy-pracy-z-gcp/zadanie-domowe-nr-2/" target="_blank">Zadanie domowe z tygodnia 2 (Microsoft Azure – Software Development)</a></p>
+<hr>
+<h4 id="1-utworzenie-resource-group">1. Utworzenie <code>Resource group</code></h4>
+<p>Utworzenie <code>Resource group</code> za pomocą:</p>
+<ul>
+<li>Azure Portal</li>
+<li>Azure CLI</li>
+<li>PowerShell</li>
+<li>Azure Rest API</li>
+</ul>
+<h4 id="11-azure-portal">1.1 Azure Portal</h4>
+<p><img src="https://pelicandev.io/images/2020/07/11/azure-portal-create-resource-group.jpg" alt="azure portal create resource group">
+<img src="https://pelicandev.io/images/2020/07/11/azure-portal-review-creating-resource-group.jpg" alt="azure portal review creating resource group">
+<img src="https://pelicandev.io/images/2020/07/11/azure-portal-list-of-resource-group.jpg" alt="azure portal list of resource group"></p>
+<h4 id="12-azure-cli">1.2 Azure CLI</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">RG_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rg-azdev-zad2-cli&#34;</span>
+RG_LOCATION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;westeurope&#34;</span>
+
+az group create -n $RG_NAME -l $RG_LOCATION 
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bartosz@Azure:~$ az account list-locations -o table
+DisplayName           Latitude    Longitude    Name
+--------------------  ----------  -----------  ------------------
+East Asia             22.267      114.188      eastasia
+Southeast Asia        1.283       103.833      southeastasia
+Central US            41.5908     -93.6208     centralus
+East US               37.3719     -79.8164     eastus
+East US <span style="color:#ae81ff">2</span>             36.6681     -78.3889     eastus2
+West US               37.783      -122.417     westus
+North Central US      41.8819     -87.6278     northcentralus
+South Central US      29.4167     -98.5        southcentralus
+North Europe          53.3478     -6.2597      northeurope
+West Europe           52.3667     4.9          westeurope
+Japan West            34.6939     135.5022     japanwest
+Japan East            35.68       139.77       japaneast
+Brazil South          -23.55      -46.633      brazilsouth
+Australia East        -33.86      151.2094     australiaeast
+Australia Southeast   -37.8136    144.9631     australiasoutheast
+South India           12.9822     80.1636      southindia
+Central India         18.5822     73.9197      centralindia
+West India            19.088      72.868       westindia
+Canada Central        43.653      -79.383      canadacentral
+Canada East           46.817      -71.217      canadaeast
+UK South              50.941      -0.799       uksouth
+UK West               53.427      -3.084       ukwest
+West Central US       40.890      -110.234     westcentralus
+West US <span style="color:#ae81ff">2</span>             47.233      -119.852     westus2
+Korea Central         37.5665     126.9780     koreacentral
+Korea South           35.1796     129.0756     koreasouth
+France Central        46.3772     2.3730       francecentral
+France South          43.8345     2.1972       francesouth
+Australia Central     -35.3075    149.1244     australiacentral
+Australia Central <span style="color:#ae81ff">2</span>   -35.3075    149.1244     australiacentral2
+UAE Central           24.466667   54.366669    uaecentral
+UAE North             25.266666   55.316666    uaenorth
+South Africa North    -25.731340  28.218370    southafricanorth
+South Africa West     -34.075691  18.843266    southafricawest
+Switzerland North     47.451542   8.564572     switzerlandnorth
+Switzerland West      46.204391   6.143158     switzerlandwest
+Germany North         53.073635   8.806422     germanynorth
+Germany West Central  50.110924   8.682127     germanywestcentral
+Norway West           58.969975   5.733107     norwaywest
+Norway East           59.913868   10.752245    norwayeast
+bartosz@Azure:~$ RG_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rg-azdev-zad2-cli&#34;</span>
+bartosz@Azure:~$ RG_LOCATION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;westeurope&#34;</span>
+bartosz@Azure:~$ az group create -n $RG_NAME -l $RG_LOCATION
+<span style="color:#f92672">{</span>
+  <span style="color:#e6db74">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;/subscriptions/748173f1-20c4-4e68-ac58-641f67a83501/resourceGroups/rg-azdev-zad2-cli&#34;</span>,
+  <span style="color:#e6db74">&#34;location&#34;</span>: <span style="color:#e6db74">&#34;westeurope&#34;</span>,
+  <span style="color:#e6db74">&#34;managedBy&#34;</span>: null,
+  <span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;rg-azdev-zad2-cli&#34;</span>,
+  <span style="color:#e6db74">&#34;properties&#34;</span>: <span style="color:#f92672">{</span>
+    <span style="color:#e6db74">&#34;provisioningState&#34;</span>: <span style="color:#e6db74">&#34;Succeeded&#34;</span>
+  <span style="color:#f92672">}</span>,
+  <span style="color:#e6db74">&#34;tags&#34;</span>: null,
+  <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;Microsoft.Resources/resourceGroups&#34;</span>
+<span style="color:#f92672">}</span>
+bartosz@Azure:~$ az group list -o table
+Name                            Location    Status
+------------------------------  ----------  ---------
+rg-automation                   westeurope  Succeeded
+rg-azdev-zad2-portal            westeurope  Succeeded
+cloud-shell-storage-westeurope  westeurope  Succeeded
+rg-azdev-zad2-cli               westeurope  Succeeded
+</code></pre></div><h4 id="13-powershell">1.3 PowerShell</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$RG_NAME=<span style="color:#e6db74">&#34;rg-azdev-zad2-powershell&#34;</span>
+$RG_LOCATION=<span style="color:#e6db74">&#34;westeurope&#34;</span>
+
+New-AzureRmResourceGroup -Name $RG_NAME -Location $RG_LOCATION
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">PS /home/bartosz&gt; $RG_NAME=<span style="color:#e6db74">&#34;rg-azdev-zad2-powershell&#34;</span>
+PS /home/bartosz&gt; $RG_LOCATION=<span style="color:#e6db74">&#34;westeurope&#34;</span>
+PS /home/bartosz&gt; New-AzureRmResourceGroup -Name $RG_NAME -Location $RG_LOCATION
+
+ResourceGroupName <span style="color:#960050;background-color:#1e0010">:</span> rg-azdev-zad2-powershell
+Location          <span style="color:#960050;background-color:#1e0010">:</span> westeurope
+ProvisioningState <span style="color:#960050;background-color:#1e0010">:</span> Succeeded
+Tags              <span style="color:#960050;background-color:#1e0010">:</span>
+ResourceId        <span style="color:#960050;background-color:#1e0010">:</span> /subscriptions/748173f1-20c4-4e68-ac58-641f67a83501/resourceGroups/rg-azdev-zad2-powershell
+
+PS /home/bartosz&gt; Get-AzureRmResourceGroup
+
+ResourceGroupName <span style="color:#960050;background-color:#1e0010">:</span> rg-automation
+Location          <span style="color:#960050;background-color:#1e0010">:</span> westeurope
+ProvisioningState <span style="color:#960050;background-color:#1e0010">:</span> Succeeded
+Tags              <span style="color:#960050;background-color:#1e0010">:</span>
+                    Name    Value
+                    ======  =====
+                    Locked  yes
+
+ResourceId        <span style="color:#960050;background-color:#1e0010">:</span> /subscriptions/748173f1-20c4-4e68-ac58-641f67a83501/resourceGroups/rg-automation
+
+ResourceGroupName <span style="color:#960050;background-color:#1e0010">:</span> rg-azdev-zad2-portal
+Location          <span style="color:#960050;background-color:#1e0010">:</span> westeurope
+ProvisioningState <span style="color:#960050;background-color:#1e0010">:</span> Succeeded
+Tags              <span style="color:#960050;background-color:#1e0010">:</span>
+ResourceId        <span style="color:#960050;background-color:#1e0010">:</span> /subscriptions/748173f1-20c4-4e68-ac58-641f67a83501/resourceGroups/rg-azdev-zad2-portal
+
+ResourceGroupName <span style="color:#960050;background-color:#1e0010">:</span> cloud-shell-storage-westeurope
+Location          <span style="color:#960050;background-color:#1e0010">:</span> westeurope
+ProvisioningState <span style="color:#960050;background-color:#1e0010">:</span> Succeeded
+Tags              <span style="color:#960050;background-color:#1e0010">:</span>
+ResourceId        <span style="color:#960050;background-color:#1e0010">:</span> /subscriptions/748173f1-20c4-4e68-ac58-641f67a83501/resourceGroups/cloud-shell-storage-westeurope
+
+ResourceGroupName <span style="color:#960050;background-color:#1e0010">:</span> rg-azdev-zad2-cli
+Location          <span style="color:#960050;background-color:#1e0010">:</span> westeurope
+ProvisioningState <span style="color:#960050;background-color:#1e0010">:</span> Succeeded
+Tags              <span style="color:#960050;background-color:#1e0010">:</span>
+ResourceId        <span style="color:#960050;background-color:#1e0010">:</span> /subscriptions/748173f1-20c4-4e68-ac58-641f67a83501/resourceGroups/rg-azdev-zad2-cli
+
+ResourceGroupName <span style="color:#960050;background-color:#1e0010">:</span> rg-azdev-zad2-powershell
+Location          <span style="color:#960050;background-color:#1e0010">:</span> westeurope
+ProvisioningState <span style="color:#960050;background-color:#1e0010">:</span> Succeeded
+Tags              <span style="color:#960050;background-color:#1e0010">:</span>
+ResourceId        <span style="color:#960050;background-color:#1e0010">:</span> /subscriptions/748173f1-20c4-4e68-ac58-641f67a83501/resourceGroups/rg-azdev-zad2-powershell
+</code></pre></div><h4 id="14-azure-rest-api">1.4 Azure Rest API</h4>
+<p><img src="https://pelicandev.io/images/2020/07/11/azure-rest-api-create-resource-group.jpg" alt="azure rest api create resource group">
+<img src="https://pelicandev.io/images/2020/07/11/azure-rest-api-list-of-resource-group.jpg" alt="azure rest api list of resource group"></p>
+<hr>
+
+    </div>
+    <div class="post-footer">
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "pelicandev" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

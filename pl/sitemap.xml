@@ -3,8 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://pelicandev.io/pl/tags/azure/</loc>
+    <lastmod>2020-07-11T21:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pelicandev.io/pl/tags/azure-development/</loc>
+    <lastmod>2020-07-11T21:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pelicandev.io/pl/tags/development/</loc>
+    <lastmod>2020-07-11T21:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pelicandev.io/pl/tags/homework/</loc>
+    <lastmod>2020-07-11T21:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pelicandev.io/pl/</loc>
-    <lastmod>2020-06-20T14:00:00+02:00</lastmod>
+    <lastmod>2020-07-11T21:00:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +39,7 @@
   
   <url>
     <loc>https://pelicandev.io/pl/posts/</loc>
-    <lastmod>2020-06-20T14:00:00+02:00</lastmod>
+    <lastmod>2020-07-11T21:00:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -30,6 +50,31 @@
                 hreflang="pl"
                 href="https://pelicandev.io/pl/posts/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://pelicandev.io/pl/tags/szko%C5%82a-chmury/</loc>
+    <lastmod>2020-07-11T21:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pelicandev.io/pl/tags/</loc>
+    <lastmod>2020-07-11T21:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://pelicandev.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://pelicandev.io/pl/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://pelicandev.io/pl/2020/07/11/tworzenie-zasob%C3%B3w-za-pomoc%C4%85-azure-portal-azure-cli-azure-powershell-azure-rest-api/</loc>
+    <lastmod>2020-07-11T21:00:00+02:00</lastmod>
   </url>
   
   <url>
@@ -58,20 +103,6 @@
                 rel="alternate"
                 hreflang="pl"
                 href="https://pelicandev.io/pl/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://pelicandev.io/pl/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://pelicandev.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://pelicandev.io/pl/tags/"
                 />
   </url>
   

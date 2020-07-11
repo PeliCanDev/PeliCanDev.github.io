@@ -6,9 +6,55 @@
     <description>Recent content in Tags on PeliCanDev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 11 Jul 2020 21:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://pelicandev.io/pl/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>azure</title>
+      <link>https://pelicandev.io/pl/tags/azure/</link>
+      <pubDate>Sat, 11 Jul 2020 21:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/pl/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>azure-development</title>
+      <link>https://pelicandev.io/pl/tags/azure-development/</link>
+      <pubDate>Sat, 11 Jul 2020 21:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/pl/tags/azure-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>https://pelicandev.io/pl/tags/development/</link>
+      <pubDate>Sat, 11 Jul 2020 21:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/pl/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>homework</title>
+      <link>https://pelicandev.io/pl/tags/homework/</link>
+      <pubDate>Sat, 11 Jul 2020 21:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/pl/tags/homework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>szkoła-chmury</title>
+      <link>https://pelicandev.io/pl/tags/szko%C5%82a-chmury/</link>
+      <pubDate>Sat, 11 Jul 2020 21:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/pl/tags/szko%C5%82a-chmury/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

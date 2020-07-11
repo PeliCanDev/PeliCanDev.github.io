@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>PeliCanDev</title>
-    <link>https://pelicandev.io/pl/</link>
-    <description>Recent content on PeliCanDev</description>
+    <title>homework on PeliCanDev</title>
+    <link>https://pelicandev.io/pl/tags/homework/</link>
+    <description>Recent content in homework on PeliCanDev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Jul 2020 21:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://pelicandev.io/pl/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pelicandev.io/pl/tags/homework/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,15 +20,6 @@
       <description>Zadanie domowe z tygodnia 2 (Microsoft Azure – Software Development)
  1. Utworzenie Resource group Utworzenie Resource group za pomocą:
  Azure Portal Azure CLI PowerShell Azure Rest API  1.1 Azure Portal 1.2 Azure CLI RG_NAME=&amp;#34;rg-azdev-zad2-cli&amp;#34; RG_LOCATION=&amp;#34;westeurope&amp;#34; az group create -n $RG_NAME -l $RG_LOCATION bartosz@Azure:~$ az account list-locations -o table DisplayName Latitude Longitude Name -------------------- ---------- ----------- ------------------ East Asia 22.267 114.188 eastasia Southeast Asia 1.283 103.833 southeastasia Central US 41.</description>
-    </item>
-    
-    <item>
-      <title>Witaj świecie!</title>
-      <link>https://pelicandev.io/pl/2020/06/20/witaj-%C5%9Bwiecie/</link>
-      <pubDate>Sat, 20 Jun 2020 14:00:00 +0200</pubDate>
-      
-      <guid>https://pelicandev.io/pl/2020/06/20/witaj-%C5%9Bwiecie/</guid>
-      <description>Pierwszy post - PL</description>
     </item>
     
   </channel>
