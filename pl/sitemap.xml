@@ -38,18 +38,8 @@
   </url>
   
   <url>
-    <loc>https://pelicandev.io/pl/posts/</loc>
+    <loc>https://pelicandev.io/pl/szko%C5%82a-chmury/</loc>
     <lastmod>2020-07-11T21:00:00+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://pelicandev.io/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="https://pelicandev.io/pl/posts/"
-                />
   </url>
   
   <url>
@@ -73,8 +63,23 @@
   </url>
   
   <url>
-    <loc>https://pelicandev.io/pl/2020/07/11/tworzenie-zasob%C3%B3w-za-pomoc%C4%85-azure-portal-azure-cli-azure-powershell-azure-rest-api/</loc>
+    <loc>https://pelicandev.io/pl/szko%C5%82a-chmury/2020-07-11-tworzenie-zasob%C3%B3w-w-azure/</loc>
     <lastmod>2020-07-11T21:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pelicandev.io/pl/posts/</loc>
+    <lastmod>2020-06-20T14:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://pelicandev.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="https://pelicandev.io/pl/posts/"
+                />
   </url>
   
   <url>
