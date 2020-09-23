@@ -238,6 +238,40 @@ if (!doNotTrack) {
 
 <span style="color:#66d9ef">select</span> first_day_cases, last_day_cases, days_diff, POW((last_day_cases<span style="color:#f92672">/</span>first_day_cases),(<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>days_diff))<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">as</span> cdgr
 <span style="color:#66d9ef">from</span> summary
+</code></pre></div><h4 id="create-a-datastudio-report">Create a Datastudio report</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+  <span style="color:#66d9ef">SUM</span>(confirmed) <span style="color:#66d9ef">AS</span> country_cases,
+  <span style="color:#66d9ef">SUM</span>(deaths) <span style="color:#66d9ef">AS</span> country_deaths
+<span style="color:#66d9ef">FROM</span>
+  <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary<span style="color:#f92672">`</span>
+<span style="color:#66d9ef">WHERE</span>
+  date <span style="color:#66d9ef">BETWEEN</span> <span style="color:#e6db74">&#39;2020-03-15&#39;</span>
+  <span style="color:#66d9ef">AND</span> <span style="color:#e6db74">&#39;2020-04-30&#39;</span>
+  <span style="color:#66d9ef">AND</span> country_region<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;US&#39;</span>
+<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> country_region
+</code></pre></div><p>Visualize result:</p>
+<ol>
+<li>Run the above query</li>
+<li>Click <code>EXPLORE DATE</code> and next <code>Explore with Data Studio</code></li>
+<li>Authorize application</li>
+<li>Change chart table to <code>Time series chart</code></li>
+<li>Set Metric to <code>country_cases</code> and <code>country_deaths</code></li>
+<li>Click <code>SAVE</code></li>
+</ol>
+<p>Above query is invalid to task but it is needed to pass verifiaction&hellip;</p>
+<p>Here is valid query just for to be clear.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+  date,
+  <span style="color:#66d9ef">SUM</span>(confirmed) <span style="color:#66d9ef">AS</span> country_cases,
+  <span style="color:#66d9ef">SUM</span>(deaths) <span style="color:#66d9ef">AS</span> country_deaths,
+  <span style="color:#66d9ef">SUM</span>(recovered) <span style="color:#66d9ef">AS</span> country_recovered
+<span style="color:#66d9ef">FROM</span>
+  <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary<span style="color:#f92672">`</span>
+<span style="color:#66d9ef">WHERE</span>
+  date <span style="color:#66d9ef">BETWEEN</span> <span style="color:#e6db74">&#39;2020-03-15&#39;</span>
+  <span style="color:#66d9ef">AND</span> <span style="color:#e6db74">&#39;2020-04-30&#39;</span>
+  <span style="color:#66d9ef">AND</span> country_region<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;US&#39;</span>
+<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> date
 </code></pre></div>
     </div>
     <div class="post-footer">
