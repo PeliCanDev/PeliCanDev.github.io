@@ -25,10 +25,10 @@ if (!doNotTrack) {
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Build a Website on Google Cloud: Challenge Lab - Qwiklabs Answers"/>
-<meta name="twitter:description" content="First post"/>
+<meta name="twitter:description" content="Task 1: Download the monolith code and build your container git clone https://github.com/googlecodelabs/monolith-to-microservices.git cd monolith-to-microservices/ sh setup.sh gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/fancytest:1.0.0 ~/monolith-to-microservices/monolith Task 2: Create a kubernetes cluster and deploy the application gcloud container clusters create fancy-cluster --num-nodes 3 --region us-central1-a kubectl create deployment fancytest --image=gcr.io/${GOOGLE_CLOUD_PROJECT}/fancytest:1.0.0 kubectl expose deployment fancytest --type=LoadBalancer --port 80 --target-port 8080 Task 3: Create a containerized version of your Microservices gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/orders:1.0.0 ~/monolith-to-microservices/microservices/src/orders gcloud builds submit --tag gcr."/>
 
     <meta property="og:title" content="Build a Website on Google Cloud: Challenge Lab - Qwiklabs Answers" />
-<meta property="og:description" content="First post" />
+<meta property="og:description" content="Task 1: Download the monolith code and build your container git clone https://github.com/googlecodelabs/monolith-to-microservices.git cd monolith-to-microservices/ sh setup.sh gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/fancytest:1.0.0 ~/monolith-to-microservices/monolith Task 2: Create a kubernetes cluster and deploy the application gcloud container clusters create fancy-cluster --num-nodes 3 --region us-central1-a kubectl create deployment fancytest --image=gcr.io/${GOOGLE_CLOUD_PROJECT}/fancytest:1.0.0 kubectl expose deployment fancytest --type=LoadBalancer --port 80 --target-port 8080 Task 3: Create a containerized version of your Microservices gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/orders:1.0.0 ~/monolith-to-microservices/microservices/src/orders gcloud builds submit --tag gcr." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pelicandev.io/2020/06/06/build-a-website-on-google-cloud-challenge-lab-qwiklabs-answers/" />
 <meta property="article:published_time" content="2020-06-06T14:00:00+02:00" />
@@ -96,8 +96,47 @@ if (!doNotTrack) {
           <a class="tag" href="https://pelicandev.io/tags/qwiklabs/">qwiklabs</a><a class="tag" href="https://pelicandev.io/tags/qwiklabs-answers/">qwiklabs-answers</a><a class="tag" href="https://pelicandev.io/tags/gcp/">gcp</a></div></div>
     </header>
     <div class="post-content">
-      <p>First post</p>
+      <h4 id="task-1-download-the-monolith-code-and-build-your-container">Task 1: Download the monolith code and build your container</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/googlecodelabs/monolith-to-microservices.git
+cd monolith-to-microservices/
+sh setup.sh
+gcloud builds submit --tag gcr.io/<span style="color:#e6db74">${</span>GOOGLE_CLOUD_PROJECT<span style="color:#e6db74">}</span>/fancytest:1.0.0 ~/monolith-to-microservices/monolith
+</code></pre></div><h4 id="task-2-create-a-kubernetes-cluster-and-deploy-the-application">Task 2: Create a kubernetes cluster and deploy the application</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gcloud container clusters create fancy-cluster --num-nodes <span style="color:#ae81ff">3</span> --region us-central1-a
+kubectl create deployment fancytest --image<span style="color:#f92672">=</span>gcr.io/<span style="color:#e6db74">${</span>GOOGLE_CLOUD_PROJECT<span style="color:#e6db74">}</span>/fancytest:1.0.0
+kubectl expose deployment fancytest --type<span style="color:#f92672">=</span>LoadBalancer --port <span style="color:#ae81ff">80</span> --target-port <span style="color:#ae81ff">8080</span>
+</code></pre></div><h4 id="task-3-create-a-containerized-version-of-your-microservices">Task 3: Create a containerized version of your Microservices</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gcloud builds submit --tag gcr.io/<span style="color:#e6db74">${</span>GOOGLE_CLOUD_PROJECT<span style="color:#e6db74">}</span>/orders:1.0.0 ~/monolith-to-microservices/microservices/src/orders
+gcloud builds submit --tag gcr.io/<span style="color:#e6db74">${</span>GOOGLE_CLOUD_PROJECT<span style="color:#e6db74">}</span>/products:1.0.0 ~/monolith-to-microservices/microservices/src/products
+</code></pre></div><h4 id="task-4-deploy-the-new-microservices">Task 4: Deploy the new microservices</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create deployment orders --image<span style="color:#f92672">=</span>gcr.io/<span style="color:#e6db74">${</span>GOOGLE_CLOUD_PROJECT<span style="color:#e6db74">}</span>/orders:1.0.0
+kubectl expose deployment orders --type<span style="color:#f92672">=</span>LoadBalancer --port <span style="color:#ae81ff">80</span> --target-port <span style="color:#ae81ff">8081</span>
 
+kubectl create deployment products --image<span style="color:#f92672">=</span>gcr.io/<span style="color:#e6db74">${</span>GOOGLE_CLOUD_PROJECT<span style="color:#e6db74">}</span>/products:1.0.0
+kubectl expose deployment products --type<span style="color:#f92672">=</span>LoadBalancer --port <span style="color:#ae81ff">80</span> --target-port <span style="color:#ae81ff">8082</span>
+
+<span style="color:#75715e"># check services</span>
+ORDERS_EXTERNAL_IP<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>kubectl get svc orders -o jsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{.status.loadBalancer.ingress[0].ip}&#34;</span><span style="color:#66d9ef">)</span>
+PRODUCTS_EXTERNAL_IP<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>kubectl get svc products -o jsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{.status.loadBalancer.ingress[0].ip}&#34;</span><span style="color:#66d9ef">)</span>
+curl http://$ORDERS_EXTERNAL_IP/api/orders
+curl http://$PRODUCTS_EXTERNAL_IP/api/products
+</code></pre></div><h4 id="task-5-configure-the-frontend-microservice">Task 5: Configure the Frontend microservice</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># reconfigure frontend configuration</span>
+cd ~/monolith-to-microservices/react-app
+sed -i <span style="color:#e6db74">&#34;s|localhost:8081|</span><span style="color:#e6db74">${</span>ORDERS_EXTERNAL_IP<span style="color:#e6db74">}</span><span style="color:#e6db74">|g&#34;</span> .env
+sed -i <span style="color:#e6db74">&#34;s|localhost:8082|</span><span style="color:#e6db74">${</span>PRODUCTS_EXTERNAL_IP<span style="color:#e6db74">}</span><span style="color:#e6db74">|g&#34;</span> .env
+
+<span style="color:#75715e"># check configuration</span>
+cat .env
+
+<span style="color:#75715e"># rebuild</span>
+npm run build
+</code></pre></div><h4 id="task-6-create-a-containerized-version-of-the-frontend-microservice">Task 6: Create a containerized version of the Frontend microservice</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gcloud builds submit --tag gcr.io/<span style="color:#e6db74">${</span>GOOGLE_CLOUD_PROJECT<span style="color:#e6db74">}</span>/frontend:1.0.0 ~/monolith-to-microservices/microservices/src/frontend
+</code></pre></div><h4 id="task-7-deploy-the-frontend-microservice">Task 7: Deploy the Frontend microservice</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create deployment frontend --image<span style="color:#f92672">=</span>gcr.io/<span style="color:#e6db74">${</span>GOOGLE_CLOUD_PROJECT<span style="color:#e6db74">}</span>/frontend:1.0.0
+kubectl expose deployment frontend --type<span style="color:#f92672">=</span>LoadBalancer --port <span style="color:#ae81ff">80</span> --target-port <span style="color:#ae81ff">8080</span>
+</code></pre></div>
     </div>
     <div class="post-footer">
       <div id="disqus_thread"></div>
