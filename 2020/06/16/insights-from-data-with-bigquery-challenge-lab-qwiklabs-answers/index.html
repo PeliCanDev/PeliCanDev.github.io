@@ -134,7 +134,13 @@ if (!doNotTrack) {
 <span style="color:#66d9ef">FROM</span> <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary<span style="color:#f92672">`</span> 
 <span style="color:#66d9ef">where</span> country_region<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Italy&#34;</span> <span style="color:#66d9ef">and</span> date<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2020-04-30&#39;</span>
 <span style="color:#75715e">--and date between &#39;2020-04-01&#39; and &#39;2020-04-30&#39;
-</span></code></pre></div>
+</span></code></pre></div><h4 id="query-5-identifying-specific-day">Query 5: Identifying specific day</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> date
+<span style="color:#66d9ef">FROM</span> <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary<span style="color:#f92672">`</span> 
+<span style="color:#66d9ef">where</span> country_region<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Italy&#34;</span> <span style="color:#66d9ef">and</span> deaths<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10000</span>
+<span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> date <span style="color:#66d9ef">asc</span>
+<span style="color:#66d9ef">limit</span> <span style="color:#ae81ff">1</span>
+</code></pre></div>
     </div>
     <div class="post-footer">
       <div id="disqus_thread"></div>
