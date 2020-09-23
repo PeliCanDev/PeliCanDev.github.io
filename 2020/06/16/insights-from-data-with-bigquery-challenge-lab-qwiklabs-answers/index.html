@@ -168,6 +168,35 @@ if (!doNotTrack) {
 <span style="color:#66d9ef">select</span> <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>)
 <span style="color:#66d9ef">from</span> india_previous_day_comparison
 <span style="color:#66d9ef">where</span> net_new_cases<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</code></pre></div><h4 id="query-7-doubling-rate">Query 7: Doubling rate</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">WITH</span> us_cases_by_date <span style="color:#66d9ef">AS</span> (
+  <span style="color:#66d9ef">SELECT</span>
+    date,
+    <span style="color:#66d9ef">SUM</span>(confirmed) <span style="color:#66d9ef">AS</span> cases
+  <span style="color:#66d9ef">FROM</span>
+    <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary<span style="color:#f92672">`</span>
+  <span style="color:#66d9ef">WHERE</span>
+    country_region<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;US&#34;</span>
+    <span style="color:#66d9ef">AND</span> date <span style="color:#66d9ef">between</span> <span style="color:#e6db74">&#39;2020-03-22&#39;</span> <span style="color:#66d9ef">and</span> <span style="color:#e6db74">&#39;2020-04-20&#39;</span>
+  <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+    date
+  <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+    date <span style="color:#66d9ef">ASC</span> 
+ )
+ 
+, us_previous_day_comparison <span style="color:#66d9ef">AS</span> 
+(<span style="color:#66d9ef">SELECT</span>
+  date,
+  cases,
+  LAG(cases) OVER(<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> date) <span style="color:#66d9ef">AS</span> previous_day,
+  cases <span style="color:#f92672">-</span> LAG(cases) OVER(<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> date) <span style="color:#66d9ef">AS</span> net_new_cases,
+  (cases <span style="color:#f92672">-</span> LAG(cases) OVER(<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> date))<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span><span style="color:#f92672">/</span>LAG(cases) OVER(<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> date) <span style="color:#66d9ef">AS</span> percentage_increase
+<span style="color:#66d9ef">FROM</span> us_cases_by_date
+)
+
+<span style="color:#66d9ef">select</span> Date, cases <span style="color:#66d9ef">as</span> Confirmed_Cases_On_Day, previous_day <span style="color:#66d9ef">as</span> Confirmed_Cases_Previous_Day, percentage_increase <span style="color:#66d9ef">as</span> Percentage_Increase_In_Cases
+<span style="color:#66d9ef">from</span> us_previous_day_comparison
+<span style="color:#66d9ef">where</span> percentage_increase <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>
 </code></pre></div>
     </div>
     <div class="post-footer">
