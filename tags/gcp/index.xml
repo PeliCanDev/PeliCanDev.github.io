@@ -23,10 +23,10 @@
     
     <item>
       <title>Build a Website on Google Cloud: Challenge Lab - Qwiklabs Answers</title>
-      <link>https://pelicandev.io/2020/06/06/build-a-website-on-google-cloud-challenge-lab-qwiklabs-answers/</link>
+      <link>https://pelicandev.io/qwiklabs/2020-06-06-build-a-website-on-google-cloud/</link>
       <pubDate>Sat, 06 Jun 2020 14:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/2020/06/06/build-a-website-on-google-cloud-challenge-lab-qwiklabs-answers/</guid>
+      <guid>https://pelicandev.io/qwiklabs/2020-06-06-build-a-website-on-google-cloud/</guid>
       <description>Build a Website on Google Cloud: Challenge Lab Task 1: Download the monolith code and build your container git clone https://github.com/googlecodelabs/monolith-to-microservices.git cd monolith-to-microservices/ sh setup.sh gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/fancytest:1.0.0 ~/monolith-to-microservices/monolith Task 2: Create a kubernetes cluster and deploy the application gcloud container clusters create fancy-cluster --num-nodes 3 --region us-central1-a kubectl create deployment fancytest --image=gcr.io/${GOOGLE_CLOUD_PROJECT}/fancytest:1.0.0 kubectl expose deployment fancytest --type=LoadBalancer --port 80 --target-port 8080 Task 3: Create a containerized version of your Microservices gcloud builds submit --tag gcr.</description>
     </item>
     
