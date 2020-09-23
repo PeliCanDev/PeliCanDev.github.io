@@ -86,7 +86,7 @@ if (!doNotTrack) {
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-          1 min read
+          2 min read
         </div>
         
 
@@ -140,6 +140,34 @@ if (!doNotTrack) {
 <span style="color:#66d9ef">where</span> country_region<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Italy&#34;</span> <span style="color:#66d9ef">and</span> deaths<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10000</span>
 <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> date <span style="color:#66d9ef">asc</span>
 <span style="color:#66d9ef">limit</span> <span style="color:#ae81ff">1</span>
+</code></pre></div><h4 id="query-6-finding-days-with-zero-net-new-cases">Query 6: Finding days with zero net new cases</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">WITH</span> india_cases_by_date <span style="color:#66d9ef">AS</span> (
+  <span style="color:#66d9ef">SELECT</span>
+    date,
+    <span style="color:#66d9ef">SUM</span>(confirmed) <span style="color:#66d9ef">AS</span> cases
+  <span style="color:#66d9ef">FROM</span>
+    <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary<span style="color:#f92672">`</span>
+  <span style="color:#66d9ef">WHERE</span>
+    country_region<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;India&#34;</span>
+    <span style="color:#66d9ef">AND</span> date <span style="color:#66d9ef">between</span> <span style="color:#e6db74">&#39;2020-02-21&#39;</span> <span style="color:#66d9ef">and</span> <span style="color:#e6db74">&#39;2020-03-15&#39;</span>
+  <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+    date
+  <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+    date <span style="color:#66d9ef">ASC</span> 
+ )
+ 
+, india_previous_day_comparison <span style="color:#66d9ef">AS</span> 
+(<span style="color:#66d9ef">SELECT</span>
+  date,
+  cases,
+  LAG(cases) OVER(<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> date) <span style="color:#66d9ef">AS</span> previous_day,
+  cases <span style="color:#f92672">-</span> LAG(cases) OVER(<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> date) <span style="color:#66d9ef">AS</span> net_new_cases
+<span style="color:#66d9ef">FROM</span> india_cases_by_date
+)
+
+<span style="color:#66d9ef">select</span> <span style="color:#66d9ef">count</span>(<span style="color:#f92672">*</span>)
+<span style="color:#66d9ef">from</span> india_previous_day_comparison
+<span style="color:#66d9ef">where</span> net_new_cases<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
 </code></pre></div>
     </div>
     <div class="post-footer">
