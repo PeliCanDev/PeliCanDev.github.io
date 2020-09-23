@@ -86,7 +86,7 @@ if (!doNotTrack) {
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
-          2 min read
+          3 min read
         </div>
         
 
@@ -210,6 +210,34 @@ if (!doNotTrack) {
 <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> country
 <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> recovery_rate <span style="color:#66d9ef">DESC</span>
 <span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">10</span>
+</code></pre></div><h4 id="query-9-cdgr---cumulative-daily-growth-rate">Query 9: CDGR - Cumulative Daily Growth Rate</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">WITH</span>
+  france_cases <span style="color:#66d9ef">AS</span> (
+  <span style="color:#66d9ef">SELECT</span>
+    date,
+    <span style="color:#66d9ef">SUM</span>(confirmed) <span style="color:#66d9ef">AS</span> total_cases
+  <span style="color:#66d9ef">FROM</span>
+    <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary<span style="color:#f92672">`</span>
+  <span style="color:#66d9ef">WHERE</span>
+    country_region<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;France&#34;</span>
+    <span style="color:#66d9ef">AND</span> date <span style="color:#66d9ef">IN</span> (<span style="color:#e6db74">&#39;2020-01-24&#39;</span>,
+      <span style="color:#e6db74">&#39;2020-05-10&#39;</span>)
+  <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span>
+    date
+  <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span>
+    date)
+, summary <span style="color:#66d9ef">as</span> (
+<span style="color:#66d9ef">SELECT</span>
+  total_cases <span style="color:#66d9ef">AS</span> first_day_cases,
+  LEAD(total_cases) OVER(<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> date) <span style="color:#66d9ef">AS</span> last_day_cases,
+  DATE_DIFF(LEAD(date) OVER(<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> date),date, <span style="color:#66d9ef">day</span>) <span style="color:#66d9ef">AS</span> days_diff
+<span style="color:#66d9ef">FROM</span>
+  france_cases
+<span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">1</span>
+)
+
+<span style="color:#66d9ef">select</span> first_day_cases, last_day_cases, days_diff, POW((last_day_cases<span style="color:#f92672">/</span>first_day_cases),(<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>days_diff))<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">as</span> cdgr
+<span style="color:#66d9ef">from</span> summary
 </code></pre></div>
     </div>
     <div class="post-footer">
