@@ -113,14 +113,21 @@ if (!doNotTrack) {
 <span style="color:#66d9ef">from</span> bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary
 <span style="color:#66d9ef">where</span> date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2020-04-15&#39;</span>
 </code></pre></div><h4 id="query-2-worst-affected-areas">Query 2: Worst Affected Areas</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">count</span>(province_state) count_of_states 
-<span style="color:#66d9ef">from</span> ( 
-  <span style="color:#66d9ef">select</span> province_state 
-  <span style="color:#66d9ef">from</span> bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary 
-  <span style="color:#66d9ef">where</span> date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2020-04-10&#39;</span> <span style="color:#66d9ef">and</span> country_region <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;US&#39;</span> <span style="color:#66d9ef">and</span> province_state <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> 
-  <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> province_state 
-  <span style="color:#66d9ef">having</span> <span style="color:#66d9ef">sum</span>(deaths) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">100</span> 
-) 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">count</span>(province_state) count_of_states
+<span style="color:#66d9ef">from</span> (
+  <span style="color:#66d9ef">select</span> province_state
+  <span style="color:#66d9ef">from</span> bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary
+  <span style="color:#66d9ef">where</span> date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2020-04-10&#39;</span> <span style="color:#66d9ef">and</span> country_region <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;US&#39;</span> <span style="color:#66d9ef">and</span> province_state <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>
+  <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> province_state
+  <span style="color:#66d9ef">having</span> <span style="color:#66d9ef">sum</span>(deaths) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">100</span>
+)
+</code></pre></div><h4 id="query-3-identifying-hotspots">Query 3: Identifying Hotspots</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> province_state <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">state</span>, <span style="color:#66d9ef">sum</span>(confirmed) <span style="color:#66d9ef">as</span> total_confirmed_cases 
+<span style="color:#66d9ef">FROM</span> <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary<span style="color:#f92672">`</span> 
+<span style="color:#66d9ef">where</span> country_region<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;US&#34;</span> <span style="color:#66d9ef">and</span> date<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2020-04-10&#39;</span>
+<span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> province_state
+<span style="color:#66d9ef">having</span> total_confirmed_cases <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1000</span>
+<span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> total_confirmed_cases <span style="color:#66d9ef">desc</span>
 </code></pre></div>
     </div>
     <div class="post-footer">
