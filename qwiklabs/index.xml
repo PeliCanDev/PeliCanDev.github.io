@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Qwiklabs on PeliCanDev</title>
+    <link>https://pelicandev.io/qwiklabs/</link>
+    <description>Recent content in Qwiklabs on PeliCanDev</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Jun 2020 14:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://pelicandev.io/qwiklabs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Insights from Data with BigQuery Challenge Lab - Qwiklabs Answers</title>
+      <link>https://pelicandev.io/qwiklabs/2020-06-16-insights-from-data-with-bigquery-challenge-lab/</link>
+      <pubDate>Tue, 16 Jun 2020 14:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/qwiklabs/2020-06-16-insights-from-data-with-bigquery-challenge-lab/</guid>
+      <description>Insights from Data with BigQuery Challenge Lab Querrying data related to the Covid-19 pandemic How to see dataset:
+ Go to BigQuery Click + ADD DATA Next Explore public dataset Search: JHU Coronavirus COVID-19 Global Cases, by country Open dataset by clicking on result and then on VIEW DATASET  Query 1: Total Confirmed Cases select sum(confirmed) as total_cases_worldwide from bigquery-public-data.covid19_jhu_csse_eu.summary where date = &amp;#39;2020-04-15&amp;#39; Query 2: Worst Affected Areas select count(province_state) count_of_states from ( select province_state from bigquery-public-data.</description>
+    </item>
+    
+  </channel>
+</rss>
