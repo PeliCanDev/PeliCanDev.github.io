@@ -197,6 +197,19 @@ if (!doNotTrack) {
 <span style="color:#66d9ef">select</span> Date, cases <span style="color:#66d9ef">as</span> Confirmed_Cases_On_Day, previous_day <span style="color:#66d9ef">as</span> Confirmed_Cases_Previous_Day, percentage_increase <span style="color:#66d9ef">as</span> Percentage_Increase_In_Cases
 <span style="color:#66d9ef">from</span> us_previous_day_comparison
 <span style="color:#66d9ef">where</span> percentage_increase <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>
+</code></pre></div><h4 id="query-8-recovery-rate">Query 8: Recovery rate</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+  country_region <span style="color:#66d9ef">AS</span> country,
+  <span style="color:#66d9ef">SUM</span>(recovered) <span style="color:#66d9ef">AS</span> recovered_cases,
+  <span style="color:#66d9ef">SUM</span>(confirmed) <span style="color:#66d9ef">AS</span> confirmed_cases,
+  (<span style="color:#66d9ef">sum</span>(recovered)<span style="color:#f92672">/</span><span style="color:#66d9ef">sum</span>(confirmed))<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span> <span style="color:#66d9ef">as</span> recovery_rate
+<span style="color:#66d9ef">FROM</span>
+  <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary<span style="color:#f92672">`</span>
+<span style="color:#66d9ef">WHERE</span>
+  date<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2020-05-10&#39;</span> <span style="color:#66d9ef">AND</span> confirmed<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">50000</span>
+<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> country
+<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> recovery_rate <span style="color:#66d9ef">DESC</span>
+<span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">10</span>
 </code></pre></div>
     </div>
     <div class="post-footer">
