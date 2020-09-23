@@ -55,5 +55,14 @@ Here is steps to configure custom domain   First we need repository. Repository 
       <description>First post</description>
     </item>
     
+    <item>
+      <title>Hello World!</title>
+      <link>https://pelicandev.io/2020/06/06/hello-world/</link>
+      <pubDate>Sat, 06 Jun 2020 14:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/2020/06/06/hello-world/</guid>
+      <description>First post</description>
+    </item>
+    
   </channel>
 </rss>
