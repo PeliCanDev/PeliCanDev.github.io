@@ -56,11 +56,11 @@ Here is steps to configure custom domain   First we need repository. Repository 
     </item>
     
     <item>
-      <title>Build a Website on Google Cloud: Challenge Lab - Qwiklabs Answers</title>
-      <link>https://pelicandev.io/2020/06/16/build-a-website-on-google-cloud-challenge-lab-qwiklabs-answers/</link>
+      <title>Insights from Data with BigQuery Challenge Lab - Qwiklabs Answers</title>
+      <link>https://pelicandev.io/2020/06/16/insights-from-data-with-bigquery-challenge-lab-qwiklabs-answers/</link>
       <pubDate>Tue, 16 Jun 2020 14:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/2020/06/16/build-a-website-on-google-cloud-challenge-lab-qwiklabs-answers/</guid>
+      <guid>https://pelicandev.io/2020/06/16/insights-from-data-with-bigquery-challenge-lab-qwiklabs-answers/</guid>
       <description>Insights from Data with BigQuery Challenge Lab Querrying data related to the Covid-19 pandemic How to see dataset:
  Go to BigQuery Click + ADD DATA Next Explore public dataset Search: JHU Coronavirus COVID-19 Global Cases, by country Open dataset by clicking on result and then on VIEW DATASET  Query 1: Total Confirmed Cases select sum(confirmed) as total_cases_worldwide from bigquery-public-data.covid19_jhu_csse_eu.summary where date = &amp;#39;2020-04-15&amp;#39; </description>
     </item>
