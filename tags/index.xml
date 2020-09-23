@@ -29,5 +29,32 @@
       <description></description>
     </item>
     
+    <item>
+      <title>gcp</title>
+      <link>https://pelicandev.io/tags/gcp/</link>
+      <pubDate>Sat, 06 Jun 2020 14:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/tags/gcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qwiklabs</title>
+      <link>https://pelicandev.io/tags/qwiklabs/</link>
+      <pubDate>Sat, 06 Jun 2020 14:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/tags/qwiklabs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qwiklabs-answers</title>
+      <link>https://pelicandev.io/tags/qwiklabs-answers/</link>
+      <pubDate>Sat, 06 Jun 2020 14:00:00 +0200</pubDate>
+      
+      <guid>https://pelicandev.io/tags/qwiklabs-answers/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
