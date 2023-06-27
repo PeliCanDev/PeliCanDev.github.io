@@ -3,11 +3,11 @@
   <head>
     <title>Tworzenie zasobów za pomocą Azure Portal, Azure CLI, Azure PowerShell, Azure Rest API // PeliCanDev</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.72.0" />
+    <meta name="generator" content="Hugo 0.92.2" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Bartosz Pelikan" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://pelicandev.io/css/main.min.d9b79013168235997bf7880bb0f8bd04abbe08bf12a1255839c3e3ace6484947.css" />
+    <link rel="stylesheet" href="https://pelicandev.github.io/css/main.min.d9b79013168235997bf7880bb0f8bd04abbe08bf12a1255839c3e3ace6484947.css" />
 
     
 <script type="application/javascript">
@@ -22,7 +22,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tworzenie zasobów za pomocą Azure Portal, Azure CLI, Azure PowerShell, Azure Rest API"/>
 <meta name="twitter:description" content="Zadanie domowe z tygodnia 2 (Microsoft Azure – Software Development)
@@ -34,9 +33,10 @@ if (!doNotTrack) {
  1. Utworzenie Resource group Utworzenie Resource group za pomocą:
  Azure Portal Azure CLI PowerShell Azure Rest API  1.1 Azure Portal 1.2 Azure CLI RG_NAME=&#34;rg-azdev-zad2-cli&#34; RG_LOCATION=&#34;westeurope&#34; az group create -n $RG_NAME -l $RG_LOCATION bartosz@Azure:~$ az account list-locations -o table DisplayName Latitude Longitude Name -------------------- ---------- ----------- ------------------ East Asia 22.267 114.188 eastasia Southeast Asia 1.283 103.833 southeastasia Central US 41." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pelicandev.io/pl/szkola-chmury/2020-07-11-tworzenie-zasob%C3%B3w-za-pomoc%C4%85-azure-portal-azure-cli-azure-powershell-azure-rest-api/" />
+<meta property="og:url" content="https://pelicandev.github.io/pl/szkola-chmury/2020-07-11-tworzenie-zasob%C3%B3w-za-pomoc%C4%85-azure-portal-azure-cli-azure-powershell-azure-rest-api/" /><meta property="article:section" content="szkola-chmury" />
 <meta property="article:published_time" content="2020-07-11T21:00:00+02:00" />
 <meta property="article:modified_time" content="2020-07-11T21:00:00+02:00" />
+
 
 
   </head>
@@ -97,7 +97,7 @@ if (!doNotTrack) {
   <title>tag</title>
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
 </svg>
-          <a class="tag" href="https://pelicandev.io/pl/tags/azure/">azure</a><a class="tag" href="https://pelicandev.io/pl/tags/azure-development/">azure-development</a><a class="tag" href="https://pelicandev.io/pl/tags/development/">development</a><a class="tag" href="https://pelicandev.io/pl/tags/szko%C5%82a-chmury/">szkoła-chmury</a><a class="tag" href="https://pelicandev.io/pl/tags/homework/">homework</a></div></div>
+          <a class="tag" href="https://pelicandev.github.io/pl/tags/azure/">azure</a><a class="tag" href="https://pelicandev.github.io/pl/tags/azure-development/">azure-development</a><a class="tag" href="https://pelicandev.github.io/pl/tags/development/">development</a><a class="tag" href="https://pelicandev.github.io/pl/tags/szko%C5%82a-chmury/">szkoła-chmury</a><a class="tag" href="https://pelicandev.github.io/pl/tags/homework/">homework</a></div></div>
     </header>
     <div class="post-content">
       <p><a href="https://szkolachmury.pl/google-cloud-platform-droga-architekta/tydzien-2-podstawy-pracy-z-gcp/zadanie-domowe-nr-2/" target="_blank">Zadanie domowe z tygodnia 2 (Microsoft Azure – Software Development)</a></p>
@@ -115,11 +115,11 @@ if (!doNotTrack) {
 <img src="https://pelicandev.io/images/2020/07/11/azure-portal-review-creating-resource-group.jpg" alt="azure portal review creating resource group">
 <img src="https://pelicandev.io/images/2020/07/11/azure-portal-list-of-resource-group.jpg" alt="azure portal list of resource group"></p>
 <h4 id="12-azure-cli">1.2 Azure CLI</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">RG_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rg-azdev-zad2-cli&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">RG_NAME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rg-azdev-zad2-cli&#34;</span>
 RG_LOCATION<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;westeurope&#34;</span>
 
 az group create -n $RG_NAME -l $RG_LOCATION 
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bartosz@Azure:~$ az account list-locations -o table
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bartosz@Azure:~$ az account list-locations -o table
 DisplayName           Latitude    Longitude    Name
 --------------------  ----------  -----------  ------------------
 East Asia             22.267      114.188      eastasia
@@ -155,11 +155,11 @@ rg-azdev-zad2-portal            westeurope  Succeeded
 cloud-shell-storage-westeurope  westeurope  Succeeded
 rg-azdev-zad2-cli               westeurope  Succeeded
 </code></pre></div><h4 id="13-powershell">1.3 PowerShell</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$RG_NAME=<span style="color:#e6db74">&#34;rg-azdev-zad2-powershell&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$RG_NAME=<span style="color:#e6db74">&#34;rg-azdev-zad2-powershell&#34;</span>
 $RG_LOCATION=<span style="color:#e6db74">&#34;westeurope&#34;</span>
 
 New-AzureRmResourceGroup -Name $RG_NAME -Location $RG_LOCATION
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">PS /home/bartosz&gt; $RG_NAME=<span style="color:#e6db74">&#34;rg-azdev-zad2-powershell&#34;</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">PS /home/bartosz&gt; $RG_NAME=<span style="color:#e6db74">&#34;rg-azdev-zad2-powershell&#34;</span>
 PS /home/bartosz&gt; $RG_LOCATION=<span style="color:#e6db74">&#34;westeurope&#34;</span>
 PS /home/bartosz&gt; New-AzureRmResourceGroup -Name $RG_NAME -Location $RG_LOCATION
 

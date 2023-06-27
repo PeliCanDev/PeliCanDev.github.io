@@ -3,11 +3,11 @@
   <head>
     <title>Hosting Hugo Static Website on GitHub Pages // PeliCanDev</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.72.0" />
+    <meta name="generator" content="Hugo 0.92.2" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Bartosz Pelikan" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://pelicandev.io/css/main.min.d9b79013168235997bf7880bb0f8bd04abbe08bf12a1255839c3e3ace6484947.css" />
+    <link rel="stylesheet" href="https://pelicandev.github.io/css/main.min.d9b79013168235997bf7880bb0f8bd04abbe08bf12a1255839c3e3ace6484947.css" />
 
     
 <script type="application/javascript">
@@ -22,7 +22,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hosting Hugo Static Website on GitHub Pages"/>
 <meta name="twitter:description" content="Intoduction   GitHub Pages allow to host static content directly from repository on GitHub. More about GitHub Pages you can find in documentation
@@ -36,9 +35,10 @@ if (!doNotTrack) {
   Preparation To host Hugo webpage on GitHub Pages I prepared 3 repositories:
  blog - project containing all files necessary to generate static site by Hugo pelicandev." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pelicandev.io/2020/06/20/hosting-hugo-static-website-on-github-pages/" />
+<meta property="og:url" content="https://pelicandev.github.io/2020/06/20/hosting-hugo-static-website-on-github-pages/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-06-20T17:00:00+02:00" />
 <meta property="article:modified_time" content="2020-06-20T17:00:00+02:00" />
+
 
 
   </head>
@@ -99,7 +99,7 @@ if (!doNotTrack) {
   <title>tag</title>
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
 </svg>
-          <a class="tag" href="https://pelicandev.io/tags/hugo/">hugo</a><a class="tag" href="https://pelicandev.io/tags/github-pages/">github-pages</a></div></div>
+          <a class="tag" href="https://pelicandev.github.io/tags/hugo/">hugo</a><a class="tag" href="https://pelicandev.github.io/tags/github-pages/">github-pages</a></div></div>
     </header>
     <div class="post-content">
       <h3 id="intoduction">Intoduction</h3>
@@ -120,17 +120,17 @@ if (!doNotTrack) {
 </ul>
 <p>Here was my steps:</p>
 <h4 id="1-create-empty-hugo-site-in-blog-folder">1. Create empty Hugo site in <strong>blog</strong> folder.</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd blog
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd blog
 hugo new site . --force
 </code></pre></div><h4 id="2-add-theme-repository-as-submodule">2. Add theme repository as submodule</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">GITHUB_PROFILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pelicandev&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">GITHUB_PROFILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pelicandev&#34;</span>
 git submodule add https://github.com/$GITHUB_PROFILE/hugo-theme-m10c.git themes/m10c
 </code></pre></div><p>I use submodule, because I can make changes in theme and have history of that in my repository.</p>
 <h4 id="3-add-theme-reference">3. Add theme reference</h4>
 <p>Open <code>config.toml</code> and add this line</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;m10c&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;m10c&#34;</span>
 </code></pre></div><h4 id="4-run-local-site-server">4. Run local site server</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server
 </code></pre></div><p>Now site is empty and need some configuration.</p>
 <h4 id="5-site-configuration">5. Site configuration</h4>
 <ul>
@@ -138,7 +138,7 @@ git submodule add https://github.com/$GITHUB_PROFILE/hugo-theme-m10c.git themes/
 <li>update <code>config.toml</code> file according to <a href="https://gohugo.io/getting-started/configuration/" target="_blank">official documentation</a> and <a href="https://github.com/vaga/hugo-theme-m10c" target="_blank">theme documetation</a></li>
 </ul>
 <p>Here is my <code>config.toml</code> file after configuration:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://pelicandev.github.io/&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;https://pelicandev.github.io/&#34;</span>
 <span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;en-us&#34;</span>
 <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Bartosz Pelikan&#34;</span>
 <span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;m10c&#34;</span>
@@ -165,7 +165,7 @@ git submodule add https://github.com/$GITHUB_PROFILE/hugo-theme-m10c.git themes/
   <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://www.bartoszpelikan.pl/&#34;</span>
 </code></pre></div><h4 id="6-add-first-post">6. Add first post</h4>
 <p>Add file <code>2020-06-20-Hello-World.md</code> to <code>/content/posts/2020</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">---
 title: &#39;Hello World!&#39;
 date: &#39;2020-06-20&#39;
 ---
@@ -173,14 +173,14 @@ date: &#39;2020-06-20&#39;
 First post
 </code></pre></div><h4 id="7-publish-site">7. Publish site</h4>
 <p>Now it&rsquo;s time to publish site to GitHub Pages. GitHub doesn&rsquo;t support Hugo site generator, just Jekyll, but fortunately it&rsquo;s possible to achieve this by sending static files.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo
 </code></pre></div><p>This command will generate static files in <code>/publish</code> folder.</p>
 <p>But before run above command let&rsquo;s create in <code>/publish</code> folder submodule that will be GitHub repository hosting our site.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">YOUR_GITHUB_PROFILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pelicandev&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">YOUR_GITHUB_PROFILE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pelicandev&#34;</span>
 YOUR_GITHUB_REPO<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pelicandev.github.io&#34;</span>
 git submodule add https://github.com/$YOUR_GITHUB_PROFILE/$YOUR_GITHUB_REPO.git public
 </code></pre></div><p>I created script <code>publish.sh</code> that will help me to publish site:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find public -type f -not -name <span style="color:#e6db74">&#39;CNAME&#39;</span> -not -name <span style="color:#e6db74">&#39;README.md&#39;</span> -not -name <span style="color:#e6db74">&#39;.git&#39;</span> -delete
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find public -type f -not -name <span style="color:#e6db74">&#39;CNAME&#39;</span> -not -name <span style="color:#e6db74">&#39;README.md&#39;</span> -not -name <span style="color:#e6db74">&#39;.git&#39;</span> -delete
 hugo
 cd public
 git status
@@ -188,7 +188,7 @@ git add .
 git commit -m <span style="color:#e6db74">&#34;Publish site </span><span style="color:#66d9ef">$(</span>date +<span style="color:#e6db74">&#34;%Y-%m-%d %H:%M:%S&#34;</span><span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
 git push origin master
 </code></pre></div><p>All what I need to do now is run sript:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sh publish.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sh publish.sh
 </code></pre></div><!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->

@@ -3,11 +3,11 @@
   <head>
     <title>Insights from Data with BigQuery Challenge Lab - Qwiklabs Answers // PeliCanDev</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.72.0" />
+    <meta name="generator" content="Hugo 0.92.2" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Bartosz Pelikan" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://pelicandev.io/css/main.min.d9b79013168235997bf7880bb0f8bd04abbe08bf12a1255839c3e3ace6484947.css" />
+    <link rel="stylesheet" href="https://pelicandev.github.io/css/main.min.d9b79013168235997bf7880bb0f8bd04abbe08bf12a1255839c3e3ace6484947.css" />
 
     
 <script type="application/javascript">
@@ -22,7 +22,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Insights from Data with BigQuery Challenge Lab - Qwiklabs Answers"/>
 <meta name="twitter:description" content="Insights from Data with BigQuery Challenge Lab Querrying data related to the Covid-19 pandemic How to see dataset:
@@ -32,9 +31,10 @@ if (!doNotTrack) {
 <meta property="og:description" content="Insights from Data with BigQuery Challenge Lab Querrying data related to the Covid-19 pandemic How to see dataset:
  Go to BigQuery Click &#43; ADD DATA Next Explore public dataset Search: JHU Coronavirus COVID-19 Global Cases, by country Open dataset by clicking on result and then on VIEW DATASET  Query 1: Total Confirmed Cases select sum(confirmed) as total_cases_worldwide from bigquery-public-data.covid19_jhu_csse_eu.summary where date = &#39;2020-04-15&#39; Query 2: Worst Affected Areas select count(province_state) count_of_states from ( select province_state from bigquery-public-data." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pelicandev.io/qwiklabs/2020-06-16-insights-from-data-with-bigquery-challenge-lab/" />
+<meta property="og:url" content="https://pelicandev.github.io/qwiklabs/2020-06-16-insights-from-data-with-bigquery-challenge-lab/" /><meta property="article:section" content="qwiklabs" />
 <meta property="article:published_time" content="2020-06-16T14:00:00+02:00" />
 <meta property="article:modified_time" content="2020-06-16T14:00:00+02:00" />
+
 
 
   </head>
@@ -95,7 +95,7 @@ if (!doNotTrack) {
   <title>tag</title>
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
 </svg>
-          <a class="tag" href="https://pelicandev.io/tags/qwiklabs/">qwiklabs</a><a class="tag" href="https://pelicandev.io/tags/qwiklabs-answers/">qwiklabs-answers</a><a class="tag" href="https://pelicandev.io/tags/gcp/">gcp</a></div></div>
+          <a class="tag" href="https://pelicandev.github.io/tags/qwiklabs/">qwiklabs</a><a class="tag" href="https://pelicandev.github.io/tags/qwiklabs-answers/">qwiklabs-answers</a><a class="tag" href="https://pelicandev.github.io/tags/gcp/">gcp</a></div></div>
     </header>
     <div class="post-content">
       <h1 id="insights-from-data-with-bigquery-challenge-labhttpsgoogleqwiklabscomfocuses11988parentcatalog"><a href="https://google.qwiklabs.com/focuses/11988?parent=catalog" target="_blank">Insights from Data with BigQuery Challenge Lab</a></h1>
@@ -109,11 +109,11 @@ if (!doNotTrack) {
 <li>Open dataset by clicking on result and then on <code>VIEW DATASET</code></li>
 </ol>
 <h4 id="query-1-total-confirmed-cases">Query 1: Total Confirmed Cases</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">sum</span>(confirmed) <span style="color:#66d9ef">as</span> total_cases_worldwide
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">sum</span>(confirmed) <span style="color:#66d9ef">as</span> total_cases_worldwide
 <span style="color:#66d9ef">from</span> bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary
 <span style="color:#66d9ef">where</span> date <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;2020-04-15&#39;</span>
 </code></pre></div><h4 id="query-2-worst-affected-areas">Query 2: Worst Affected Areas</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">count</span>(province_state) count_of_states
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">select</span> <span style="color:#66d9ef">count</span>(province_state) count_of_states
 <span style="color:#66d9ef">from</span> (
   <span style="color:#66d9ef">select</span> province_state
   <span style="color:#66d9ef">from</span> bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary
@@ -122,7 +122,7 @@ if (!doNotTrack) {
   <span style="color:#66d9ef">having</span> <span style="color:#66d9ef">sum</span>(deaths) <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">100</span>
 )
 </code></pre></div><h4 id="query-3-identifying-hotspots">Query 3: Identifying Hotspots</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> province_state <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">state</span>, <span style="color:#66d9ef">sum</span>(confirmed) <span style="color:#66d9ef">as</span> total_confirmed_cases 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> province_state <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">state</span>, <span style="color:#66d9ef">sum</span>(confirmed) <span style="color:#66d9ef">as</span> total_confirmed_cases 
 <span style="color:#66d9ef">FROM</span> <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary<span style="color:#f92672">`</span> 
 <span style="color:#66d9ef">where</span> country_region<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;US&#34;</span> <span style="color:#66d9ef">and</span> date<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2020-04-10&#39;</span>
 <span style="color:#66d9ef">group</span> <span style="color:#66d9ef">by</span> province_state
@@ -130,18 +130,18 @@ if (!doNotTrack) {
 <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> total_confirmed_cases <span style="color:#66d9ef">desc</span>
 </code></pre></div><h4 id="query-4-fatality-ratio">Query 4: Fatality Ratio</h4>
 <p>In task is requirement for <code>for the month of April 2020</code> but this doesn&rsquo;t work and in query must be <code>date='2020-04-30'</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">sum</span>(confirmed) <span style="color:#66d9ef">as</span> total_confirmed_cases, <span style="color:#66d9ef">sum</span>(deaths) <span style="color:#66d9ef">as</span> total_deaths, (<span style="color:#66d9ef">sum</span>(deaths)<span style="color:#f92672">/</span><span style="color:#66d9ef">sum</span>(confirmed))<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span> <span style="color:#66d9ef">as</span> case_fatality_ratio 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">sum</span>(confirmed) <span style="color:#66d9ef">as</span> total_confirmed_cases, <span style="color:#66d9ef">sum</span>(deaths) <span style="color:#66d9ef">as</span> total_deaths, (<span style="color:#66d9ef">sum</span>(deaths)<span style="color:#f92672">/</span><span style="color:#66d9ef">sum</span>(confirmed))<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span> <span style="color:#66d9ef">as</span> case_fatality_ratio 
 <span style="color:#66d9ef">FROM</span> <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary<span style="color:#f92672">`</span> 
 <span style="color:#66d9ef">where</span> country_region<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Italy&#34;</span> <span style="color:#66d9ef">and</span> date<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;2020-04-30&#39;</span>
 <span style="color:#75715e">--and date between &#39;2020-04-01&#39; and &#39;2020-04-30&#39;
 </span></code></pre></div><h4 id="query-5-identifying-specific-day">Query 5: Identifying specific day</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> date
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> date
 <span style="color:#66d9ef">FROM</span> <span style="color:#f92672">`</span>bigquery<span style="color:#f92672">-</span><span style="color:#66d9ef">public</span><span style="color:#f92672">-</span><span style="color:#66d9ef">data</span>.covid19_jhu_csse_eu.summary<span style="color:#f92672">`</span> 
 <span style="color:#66d9ef">where</span> country_region<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Italy&#34;</span> <span style="color:#66d9ef">and</span> deaths<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10000</span>
 <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> date <span style="color:#66d9ef">asc</span>
 <span style="color:#66d9ef">limit</span> <span style="color:#ae81ff">1</span>
 </code></pre></div><h4 id="query-6-finding-days-with-zero-net-new-cases">Query 6: Finding days with zero net new cases</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">WITH</span> india_cases_by_date <span style="color:#66d9ef">AS</span> (
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">WITH</span> india_cases_by_date <span style="color:#66d9ef">AS</span> (
   <span style="color:#66d9ef">SELECT</span>
     date,
     <span style="color:#66d9ef">SUM</span>(confirmed) <span style="color:#66d9ef">AS</span> cases
@@ -169,7 +169,7 @@ if (!doNotTrack) {
 <span style="color:#66d9ef">from</span> india_previous_day_comparison
 <span style="color:#66d9ef">where</span> net_new_cases<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
 </code></pre></div><h4 id="query-7-doubling-rate">Query 7: Doubling rate</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">WITH</span> us_cases_by_date <span style="color:#66d9ef">AS</span> (
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">WITH</span> us_cases_by_date <span style="color:#66d9ef">AS</span> (
   <span style="color:#66d9ef">SELECT</span>
     date,
     <span style="color:#66d9ef">SUM</span>(confirmed) <span style="color:#66d9ef">AS</span> cases
@@ -198,7 +198,7 @@ if (!doNotTrack) {
 <span style="color:#66d9ef">from</span> us_previous_day_comparison
 <span style="color:#66d9ef">where</span> percentage_increase <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>
 </code></pre></div><h4 id="query-8-recovery-rate">Query 8: Recovery rate</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
   country_region <span style="color:#66d9ef">AS</span> country,
   <span style="color:#66d9ef">SUM</span>(recovered) <span style="color:#66d9ef">AS</span> recovered_cases,
   <span style="color:#66d9ef">SUM</span>(confirmed) <span style="color:#66d9ef">AS</span> confirmed_cases,
@@ -211,7 +211,7 @@ if (!doNotTrack) {
 <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> recovery_rate <span style="color:#66d9ef">DESC</span>
 <span style="color:#66d9ef">LIMIT</span> <span style="color:#ae81ff">10</span>
 </code></pre></div><h4 id="query-9-cdgr---cumulative-daily-growth-rate">Query 9: CDGR - Cumulative Daily Growth Rate</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">WITH</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">WITH</span>
   france_cases <span style="color:#66d9ef">AS</span> (
   <span style="color:#66d9ef">SELECT</span>
     date,
@@ -239,7 +239,7 @@ if (!doNotTrack) {
 <span style="color:#66d9ef">select</span> first_day_cases, last_day_cases, days_diff, POW((last_day_cases<span style="color:#f92672">/</span>first_day_cases),(<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>days_diff))<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#66d9ef">as</span> cdgr
 <span style="color:#66d9ef">from</span> summary
 </code></pre></div><h4 id="create-a-datastudio-report">Create a Datastudio report</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
   <span style="color:#66d9ef">SUM</span>(confirmed) <span style="color:#66d9ef">AS</span> country_cases,
   <span style="color:#66d9ef">SUM</span>(deaths) <span style="color:#66d9ef">AS</span> country_deaths
 <span style="color:#66d9ef">FROM</span>
@@ -260,7 +260,7 @@ if (!doNotTrack) {
 </ol>
 <p>Above query is invalid to task but it is needed to pass verifiaction&hellip;</p>
 <p>Here is valid query just for to be clear.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span>
   date,
   <span style="color:#66d9ef">SUM</span>(confirmed) <span style="color:#66d9ef">AS</span> country_cases,
   <span style="color:#66d9ef">SUM</span>(deaths) <span style="color:#66d9ef">AS</span> country_deaths,

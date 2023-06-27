@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>homework on PeliCanDev</title>
-    <link>https://pelicandev.io/pl/tags/homework/</link>
+    <link>https://pelicandev.github.io/pl/tags/homework/</link>
     <description>Recent content in homework on PeliCanDev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Jul 2020 21:00:00 +0200</lastBuildDate>
-    
-	<atom:link href="https://pelicandev.io/pl/tags/homework/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 11 Jul 2020 21:00:00 +0200</lastBuildDate><atom:link href="https://pelicandev.github.io/pl/tags/homework/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tworzenie zasobów za pomocą Azure Portal, Azure CLI, Azure PowerShell, Azure Rest API</title>
-      <link>https://pelicandev.io/pl/szkola-chmury/2020-07-11-tworzenie-zasob%C3%B3w-za-pomoc%C4%85-azure-portal-azure-cli-azure-powershell-azure-rest-api/</link>
+      <link>https://pelicandev.github.io/pl/szkola-chmury/2020-07-11-tworzenie-zasob%C3%B3w-za-pomoc%C4%85-azure-portal-azure-cli-azure-powershell-azure-rest-api/</link>
       <pubDate>Sat, 11 Jul 2020 21:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/pl/szkola-chmury/2020-07-11-tworzenie-zasob%C3%B3w-za-pomoc%C4%85-azure-portal-azure-cli-azure-powershell-azure-rest-api/</guid>
+      <guid>https://pelicandev.github.io/pl/szkola-chmury/2020-07-11-tworzenie-zasob%C3%B3w-za-pomoc%C4%85-azure-portal-azure-cli-azure-powershell-azure-rest-api/</guid>
       <description>Zadanie domowe z tygodnia 2 (Microsoft Azure – Software Development)
  1. Utworzenie Resource group Utworzenie Resource group za pomocą:
  Azure Portal Azure CLI PowerShell Azure Rest API  1.1 Azure Portal 1.2 Azure CLI RG_NAME=&amp;#34;rg-azdev-zad2-cli&amp;#34; RG_LOCATION=&amp;#34;westeurope&amp;#34; az group create -n $RG_NAME -l $RG_LOCATION bartosz@Azure:~$ az account list-locations -o table DisplayName Latitude Longitude Name -------------------- ---------- ----------- ------------------ East Asia 22.267 114.188 eastasia Southeast Asia 1.283 103.833 southeastasia Central US 41.</description>

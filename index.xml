@@ -2,21 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PeliCanDev</title>
-    <link>https://pelicandev.io/</link>
+    <link>https://pelicandev.github.io/</link>
     <description>Recent content on PeliCanDev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Jul 2020 18:00:00 +0200</lastBuildDate>
-    
-	<atom:link href="https://pelicandev.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 04 Jul 2020 18:00:00 +0200</lastBuildDate><atom:link href="https://pelicandev.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Custom Subdomain on GitHub Pages</title>
-      <link>https://pelicandev.io/2020/07/04/custom-subdomain-on-github-pages/</link>
+      <link>https://pelicandev.github.io/2020/07/04/custom-subdomain-on-github-pages/</link>
       <pubDate>Sat, 04 Jul 2020 18:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/2020/07/04/custom-subdomain-on-github-pages/</guid>
+      <guid>https://pelicandev.github.io/2020/07/04/custom-subdomain-on-github-pages/</guid>
       <description>Introduction Continuation of previous post about seting Custom Domain on GitHub Pages. Today I seting custom subdomain on GitHub Pages.
 Steps to configure custom subdomain   First we need repository. I&amp;rsquo;ve created subdomain repository for this purpose.
   Now go to repository settings and set subdomain in GitHub Pages -&amp;gt; Custom domain section.   Go to your DNS provider and update records. Here is my records:
@@ -25,10 +21,10 @@ Steps to configure custom subdomain   First we need repository. I&amp;rsquo;ve c
     
     <item>
       <title>Custom Domain on GitHub Pages</title>
-      <link>https://pelicandev.io/2020/06/26/custom-domain-on-github-pages/</link>
+      <link>https://pelicandev.github.io/2020/06/26/custom-domain-on-github-pages/</link>
       <pubDate>Fri, 26 Jun 2020 18:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/2020/06/26/custom-domain-on-github-pages/</guid>
+      <guid>https://pelicandev.github.io/2020/06/26/custom-domain-on-github-pages/</guid>
       <description>Introduction Using Github pages we can use own domain - more about that you can find in documentation.
 Here is steps to configure custom domain   First we need repository. Repository for root domain should be named {user_name}.github.io or {organization_name}.github.io. In my case this is pelicandev.github.io repository.
   Now go to repository settings and set your domain in GitHub Pages -&amp;gt; Custom domain section.   Go to your DNS provider and create records for you site.</description>
@@ -36,10 +32,10 @@ Here is steps to configure custom domain   First we need repository. Repository 
     
     <item>
       <title>Hosting Hugo Static Website on GitHub Pages</title>
-      <link>https://pelicandev.io/2020/06/20/hosting-hugo-static-website-on-github-pages/</link>
+      <link>https://pelicandev.github.io/2020/06/20/hosting-hugo-static-website-on-github-pages/</link>
       <pubDate>Sat, 20 Jun 2020 17:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/2020/06/20/hosting-hugo-static-website-on-github-pages/</guid>
+      <guid>https://pelicandev.github.io/2020/06/20/hosting-hugo-static-website-on-github-pages/</guid>
       <description>Intoduction   GitHub Pages allow to host static content directly from repository on GitHub. More about GitHub Pages you can find in documentation
   Hugo is a static website generetor written in Go. More about Hugo you can find in documentation
   Preparation To host Hugo webpage on GitHub Pages I prepared 3 repositories:
@@ -48,29 +44,29 @@ Here is steps to configure custom domain   First we need repository. Repository 
     
     <item>
       <title>Hello World!</title>
-      <link>https://pelicandev.io/2020/06/20/hello-world/</link>
+      <link>https://pelicandev.github.io/2020/06/20/hello-world/</link>
       <pubDate>Sat, 20 Jun 2020 14:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/2020/06/20/hello-world/</guid>
+      <guid>https://pelicandev.github.io/2020/06/20/hello-world/</guid>
       <description>First post</description>
     </item>
     
     <item>
       <title>Insights from Data with BigQuery Challenge Lab - Qwiklabs Answers</title>
-      <link>https://pelicandev.io/qwiklabs/2020-06-16-insights-from-data-with-bigquery-challenge-lab/</link>
+      <link>https://pelicandev.github.io/qwiklabs/2020-06-16-insights-from-data-with-bigquery-challenge-lab/</link>
       <pubDate>Tue, 16 Jun 2020 14:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/qwiklabs/2020-06-16-insights-from-data-with-bigquery-challenge-lab/</guid>
+      <guid>https://pelicandev.github.io/qwiklabs/2020-06-16-insights-from-data-with-bigquery-challenge-lab/</guid>
       <description>Insights from Data with BigQuery Challenge Lab Querrying data related to the Covid-19 pandemic How to see dataset:
  Go to BigQuery Click + ADD DATA Next Explore public dataset Search: JHU Coronavirus COVID-19 Global Cases, by country Open dataset by clicking on result and then on VIEW DATASET  Query 1: Total Confirmed Cases select sum(confirmed) as total_cases_worldwide from bigquery-public-data.covid19_jhu_csse_eu.summary where date = &amp;#39;2020-04-15&amp;#39; Query 2: Worst Affected Areas select count(province_state) count_of_states from ( select province_state from bigquery-public-data.</description>
     </item>
     
     <item>
       <title>Build a Website on Google Cloud: Challenge Lab - Qwiklabs Answers</title>
-      <link>https://pelicandev.io/qwiklabs/2020-06-06-build-a-website-on-google-cloud/</link>
+      <link>https://pelicandev.github.io/qwiklabs/2020-06-06-build-a-website-on-google-cloud/</link>
       <pubDate>Sat, 06 Jun 2020 14:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/qwiklabs/2020-06-06-build-a-website-on-google-cloud/</guid>
+      <guid>https://pelicandev.github.io/qwiklabs/2020-06-06-build-a-website-on-google-cloud/</guid>
       <description>Build a Website on Google Cloud: Challenge Lab Task 1: Download the monolith code and build your container git clone https://github.com/googlecodelabs/monolith-to-microservices.git cd monolith-to-microservices/ sh setup.sh gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/fancytest:1.0.0 ~/monolith-to-microservices/monolith Task 2: Create a kubernetes cluster and deploy the application gcloud container clusters create fancy-cluster --num-nodes 3 --region us-central1-a kubectl create deployment fancytest --image=gcr.io/${GOOGLE_CLOUD_PROJECT}/fancytest:1.0.0 kubectl expose deployment fancytest --type=LoadBalancer --port 80 --target-port 8080 Task 3: Create a containerized version of your Microservices gcloud builds submit --tag gcr.</description>
     </item>
     

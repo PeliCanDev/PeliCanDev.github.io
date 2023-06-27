@@ -2,13 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on PeliCanDev</title>
-    <link>https://pelicandev.io/pl/categories/</link>
+    <link>https://pelicandev.github.io/pl/categories/</link>
     <description>Recent content in Categories on PeliCanDev</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://pelicandev.io/pl/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="https://pelicandev.github.io/pl/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

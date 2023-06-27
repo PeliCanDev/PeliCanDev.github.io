@@ -2,57 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on PeliCanDev</title>
-    <link>https://pelicandev.io/pl/tags/</link>
+    <link>https://pelicandev.github.io/pl/tags/</link>
     <description>Recent content in Tags on PeliCanDev</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Jul 2020 21:00:00 +0200</lastBuildDate>
-    
-	<atom:link href="https://pelicandev.io/pl/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 11 Jul 2020 21:00:00 +0200</lastBuildDate><atom:link href="https://pelicandev.github.io/pl/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>azure</title>
-      <link>https://pelicandev.io/pl/tags/azure/</link>
+      <link>https://pelicandev.github.io/pl/tags/azure/</link>
       <pubDate>Sat, 11 Jul 2020 21:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/pl/tags/azure/</guid>
+      <guid>https://pelicandev.github.io/pl/tags/azure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>azure-development</title>
-      <link>https://pelicandev.io/pl/tags/azure-development/</link>
+      <link>https://pelicandev.github.io/pl/tags/azure-development/</link>
       <pubDate>Sat, 11 Jul 2020 21:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/pl/tags/azure-development/</guid>
+      <guid>https://pelicandev.github.io/pl/tags/azure-development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>development</title>
-      <link>https://pelicandev.io/pl/tags/development/</link>
+      <link>https://pelicandev.github.io/pl/tags/development/</link>
       <pubDate>Sat, 11 Jul 2020 21:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/pl/tags/development/</guid>
+      <guid>https://pelicandev.github.io/pl/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>homework</title>
-      <link>https://pelicandev.io/pl/tags/homework/</link>
+      <link>https://pelicandev.github.io/pl/tags/homework/</link>
       <pubDate>Sat, 11 Jul 2020 21:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/pl/tags/homework/</guid>
+      <guid>https://pelicandev.github.io/pl/tags/homework/</guid>
       <description></description>
     </item>
     
     <item>
       <title>szkoła-chmury</title>
-      <link>https://pelicandev.io/pl/tags/szko%C5%82a-chmury/</link>
+      <link>https://pelicandev.github.io/pl/tags/szko%C5%82a-chmury/</link>
       <pubDate>Sat, 11 Jul 2020 21:00:00 +0200</pubDate>
       
-      <guid>https://pelicandev.io/pl/tags/szko%C5%82a-chmury/</guid>
+      <guid>https://pelicandev.github.io/pl/tags/szko%C5%82a-chmury/</guid>
       <description></description>
     </item>
     

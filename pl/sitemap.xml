@@ -1,114 +1,90 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://pelicandev.io/pl/tags/azure/</loc>
+    <loc>https://pelicandev.github.io/pl/tags/azure/</loc>
     <lastmod>2020-07-11T21:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pelicandev.io/pl/tags/azure-development/</loc>
+  </url><url>
+    <loc>https://pelicandev.github.io/pl/tags/azure-development/</loc>
     <lastmod>2020-07-11T21:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pelicandev.io/pl/tags/development/</loc>
+  </url><url>
+    <loc>https://pelicandev.github.io/pl/tags/development/</loc>
     <lastmod>2020-07-11T21:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pelicandev.io/pl/tags/homework/</loc>
+  </url><url>
+    <loc>https://pelicandev.github.io/pl/tags/homework/</loc>
     <lastmod>2020-07-11T21:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pelicandev.io/pl/</loc>
+  </url><url>
+    <loc>https://pelicandev.github.io/pl/</loc>
     <lastmod>2020-07-11T21:00:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://pelicandev.io/"
+                href="https://pelicandev.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pl"
-                href="https://pelicandev.io/pl/"
+                href="https://pelicandev.github.io/pl/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://pelicandev.io/pl/szkola-chmury/</loc>
+  </url><url>
+    <loc>https://pelicandev.github.io/pl/szkola-chmury/</loc>
     <lastmod>2020-07-11T21:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pelicandev.io/pl/tags/szko%C5%82a-chmury/</loc>
+  </url><url>
+    <loc>https://pelicandev.github.io/pl/tags/szko%C5%82a-chmury/</loc>
     <lastmod>2020-07-11T21:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pelicandev.io/pl/tags/</loc>
+  </url><url>
+    <loc>https://pelicandev.github.io/pl/tags/</loc>
     <lastmod>2020-07-11T21:00:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://pelicandev.io/tags/"
+                href="https://pelicandev.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pl"
-                href="https://pelicandev.io/pl/tags/"
+                href="https://pelicandev.github.io/pl/tags/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://pelicandev.io/pl/szkola-chmury/2020-07-11-tworzenie-zasob%C3%B3w-za-pomoc%C4%85-azure-portal-azure-cli-azure-powershell-azure-rest-api/</loc>
+  </url><url>
+    <loc>https://pelicandev.github.io/pl/szkola-chmury/2020-07-11-tworzenie-zasob%C3%B3w-za-pomoc%C4%85-azure-portal-azure-cli-azure-powershell-azure-rest-api/</loc>
     <lastmod>2020-07-11T21:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pelicandev.io/pl/posts/</loc>
+  </url><url>
+    <loc>https://pelicandev.github.io/pl/posts/</loc>
     <lastmod>2020-06-20T14:00:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://pelicandev.io/posts/"
+                href="https://pelicandev.github.io/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pl"
-                href="https://pelicandev.io/pl/posts/"
+                href="https://pelicandev.github.io/pl/posts/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://pelicandev.io/pl/2020/06/20/witaj-%C5%9Bwiecie/</loc>
+  </url><url>
+    <loc>https://pelicandev.github.io/pl/2020/06/20/witaj-%C5%9Bwiecie/</loc>
     <lastmod>2020-06-20T14:00:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://pelicandev.io/2020/06/20/hello-world/"
+                href="https://pelicandev.github.io/2020/06/20/hello-world/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pl"
-                href="https://pelicandev.io/pl/2020/06/20/witaj-%C5%9Bwiecie/"
+                href="https://pelicandev.github.io/pl/2020/06/20/witaj-%C5%9Bwiecie/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://pelicandev.io/pl/categories/</loc>
+  </url><url>
+    <loc>https://pelicandev.github.io/pl/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://pelicandev.io/categories/"
+                href="https://pelicandev.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pl"
-                href="https://pelicandev.io/pl/categories/"
+                href="https://pelicandev.github.io/pl/categories/"
                 />
   </url>
-  
 </urlset>
